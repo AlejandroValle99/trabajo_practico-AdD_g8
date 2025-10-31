@@ -105,4 +105,75 @@ Los datos utilizados están en la carpeta `lib`:
 - `README.md`
 - `main.ipynb`
 
+## Branching Strategy
+
+Seguimos una estrategia de branching específica para análisis de datos:
+
+### Convención de Nombres
+
+- `data/*`: Para cambios relacionados con la preparación o limpieza de datos
+
+  - Ejemplo: `data/clean-crime-dates`
+  - Ejemplo: `data/handle-missing-values`
+
+- `feature/*`: Para nuevas características o análisis
+
+  - Ejemplo: `feature/crime-trends-analysis`
+  - Ejemplo: `feature/location-clustering`
+
+- `viz/*`: Para visualizaciones y gráficos
+
+  - Ejemplo: `viz/crime-heatmap`
+  - Ejemplo: `viz/temporal-patterns`
+
+### Comandos Git Comunes
+
+1. Crear y cambiar a una nueva rama:
+
+```bash
+# Para nuevos análisis
+git checkout -b feature/crime-patterns-2024
+
+# Para visualizaciones
+git checkout -b viz/crime-distribution-map
+
+# Para preparación de datos
+git checkout -b data/clean-coordinates
+```
+
+2. Actualizar tu rama con main:
+
+```bash
+git checkout main
+git pull
+git checkout tu-rama
+git merge main
+```
+
+O actualiza primero main con git pull origin main y creas tu branch a partir de main.
+
+3. Subir cambios:
+
+```bash
+git add .
+git commit -m "feat: análisis de patrones temporales"
+git push origin tu-rama
+```
+
+### Convención de Commits
+
+- `data:` para cambios en datos
+- `feat:` para nuevos análisis o características
+- `viz:` para visualizaciones
+- `doc:` para documentación
+- `fix:` para correcciones
+
+Ejemplo:
+
+```bash
+git commit -m "viz: agregar heatmap de crímenes por zona"
+git commit -m "data: limpiar valores nulos en coordenadas"
+git commit -m "model: implementar clustering por ubicación"
+```
+
 ---
