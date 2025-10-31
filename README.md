@@ -12,7 +12,7 @@ Este proyecto requiere Python 3.12 y utiliza `uv` como gestor de dependencias.
 1. Clonar el repositorio:
 
 ```sh
-git clone <REPO_URL>
+git clone <https://github.com/AlejandroValle99/trabajo_practico-AdD_g6.git>
 cd trabajo_practico-AdD_g6
 ```
 
