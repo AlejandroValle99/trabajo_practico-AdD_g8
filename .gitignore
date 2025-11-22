@@ -11,4 +11,4 @@ wheels/
 
 
 # Data files
-lib/Crimes_-_2024_20251030.csv
+lib/*.csv
